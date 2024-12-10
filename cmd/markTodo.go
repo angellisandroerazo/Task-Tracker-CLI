@@ -1,0 +1,57 @@
+/*
+Copyright © 2024 NAME HERE <EMAIL ADDRESS>
+*/
+package cmd
+
+import (
+	"angellisandroerazo/Task-Tracker-CLI/internal"
+	"fmt"
+	"strconv"
+	"time"
+
+	"github.com/spf13/cobra"
+)
+
+// markTodoCmd represents the markTodo command
+var markTodoCmd = &cobra.Command{
+	Use:   "mark-todo [string]",
+	Short: "Cambiar a tarea por hacer.",
+	Run:   RunTodo,
+}
+
+func init() {
+	rootCmd.AddCommand(markTodoCmd)
+}
+
+func RunTodo(cmd *cobra.Command, args []string) {
+
+	if len(args) == 0 {
+		fmt.Println(internal.ErrorStyle.Render("Task ID is required."))
+		return
+	}
+
+	tasks := internal.OpenFile()
+
+	taskFound := false
+	for i, task := range tasks {
+		if strconv.Itoa(task.Id) == args[0] {
+			tasks[i].Status = "in-progress"
+			tasks[i].UpdatedAt = time.Now().Format("2006-01-02 15:04:05")
+			taskFound = true
+			break
+		}
+	}
+
+	if !taskFound {
+		fmt.Println(internal.ErrorStyle.Render("Task not found with ID."))
+		return
+	}
+
+	ok := internal.SaveFile(tasks)
+
+	if ok {
+		fmt.Println(internal.SuccessStyle.Render("Task changed to TODO."))
+		return
+	}
+
+}
