@@ -57,3 +57,6 @@ To use the task tracker, you can execute commands like:
   ```bash
   ./task-cli mark-in-progress 1
   ```
+
+## Problem Statement
+This project addresses a task management problem inspired by the challenges outlined in the [Task Tracker roadmap](https://roadmap.sh/projects/task-tracker).
