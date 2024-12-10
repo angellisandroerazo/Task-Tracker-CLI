@@ -1,4 +1,4 @@
-# TaskTrakerCLI
+# Task Traker CLI
 
 Task Tracker is a command-line tool designed to help you efficiently manage your tasks. Whether you're keeping track of personal to-dos or organizing work-related projects, Task Tracker provides a simple and intuitive way to create, update, filter, and delete tasks directly from the terminal.
 
