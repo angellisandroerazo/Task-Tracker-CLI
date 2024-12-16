@@ -21,7 +21,7 @@ Task Tracker is a command-line tool designed to help you efficiently manage your
    ```bash
    go build -o task-tracker-cli
    ```
-   ## Usage
+## Usage
 To use the task tracker, you can execute commands like:
 - Adding a new task:
   ```bash
