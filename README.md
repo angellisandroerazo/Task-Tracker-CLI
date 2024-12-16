@@ -19,43 +19,43 @@ Task Tracker is a command-line tool designed to help you efficiently manage your
 
 3. Build the CLI application:
    ```bash
-   go build -o task-cli
+   go build -o task-tracker-cli
    ```
    ## Usage
 To use the task tracker, you can execute commands like:
 - Adding a new task:
   ```bash
-  ./task-cli add "Buy groceries"
+  ./task-tracker-cli add "Buy groceries"
   ```
 
 - Listing all tasks:
   ```bash
-  ./task-cli list
+  ./task-tracker-cli list
   ```
 
 - Listing tasks by status:
   ```bash
-  ./task-cli list [todo, in-progress, done]
+  ./task-tracker-cli list [todo, in-progress, done]
   ```
 
 - Updating a task:
   ```bash
-  ./task-cli update 1 "New task description"
+  ./task-tracker-cli update 1 "New task description"
   ```
 
 - Deleting a task:
   ```bash
-  ./task-cli delete 1
+  ./task-tracker-cli delete 1
   ```
 
 - Marking a task as done:
   ```bash
-  ./task-cli mark-done 1
+  ./task-tracker-cli mark-done 1
   ```
 
 - Marking a task as in progress:
   ```bash
-  ./task-cli mark-in-progress 1
+  ./task-tracker-cli mark-in-progress 1
   ```
 
 ## Problem Statement

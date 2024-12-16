@@ -11,7 +11,7 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "task-cli",
+	Use:   "task-tracker-cli",
 	Short: "Task Tracker is a command-line tool designed to help you efficiently manage your tasks.",
 	Long:  `Task Tracker is a command-line tool designed to help you efficiently manage your tasks.`,
 	// Uncomment the following line if your bare application
